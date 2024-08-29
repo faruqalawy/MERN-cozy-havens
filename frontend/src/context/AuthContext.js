@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (!currentUser) {
-      axios.get("http://localhost:5000/currentUser")
+      axios.get("https://mern-cozy-havens-backend.vercel.app/currentUser")
         .then(response => {
           if (response.data.user) {
             setCurrentUser(response.data.user);
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/login", { username, password });
+      const response = await axios.post("https://mern-cozy-havens-backend.vercel.app/login", { username, password });
       setCurrentUser(response.data.user);
       localStorage.setItem("currentUser", JSON.stringify(response.data.user));
       setSuccessMessage(response.data.message); // Set flash message
@@ -43,7 +43,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (username, email, password) => {
     try {
-      const response = await axios.post("http://localhost:5000/register", { username, email, password });
+      const response = await axios.post("https://mern-cozy-havens-backend.vercel.app/register", { username, email, password });
       setCurrentUser(response.data.user);
       localStorage.setItem("currentUser", JSON.stringify(response.data.user));
       setSuccessMessage(response.data.message); // Set flash message
@@ -56,7 +56,7 @@ export const AuthProvider = ({ children }) => {
 
   const logout = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/logout");
+      const response = await axios.post("https://mern-cozy-havens-backend.vercel.app/logout");
       setCurrentUser(null);
       localStorage.removeItem("currentUser");
       setSuccessMessage(response.data.message); // Set flash message
