@@ -68,6 +68,10 @@ app.use("/mostPicked", MostPickedRoute);
 app.use("/categories", CategoryRoute);
 app.use("/", AuthRoute);
 
+app.use('/server', (req, res) => {
+  res.send('Server is running!')
+})
+
 app.listen(process.env.APP_PORT, () => {
   console.log("Server running on http://localhost:5000");
 });
