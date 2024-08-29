@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "heroImageUrl": "cozy-havens/images/hero-image",
+    "pros": [
+      {
+        "name": "travelers",
+        "number": 2548,
+        "imageUrl": "cozy-havens/icons/icon-traveler"
+      },
+      {
+        "name": "treasures",
+        "number": 706,
+        "imageUrl": "cozy-havens/icons/icon-treasure"
+      },
+      {
+        "name": "cities",
+        "number": 84,
+        "imageUrl": "cozy-havens/icons/icon-city"
+      }
+    ]
+  },
+  "testimonial": {
+    "_id": "asd1293uasdads1",
+    "imageUrl": "cozy-havens/images/home-testimony",
+    "name": "Happy Traveler",
+    "rate": 4.7,
+    "content": "What a great trip and comfy accommodation, I should come again with my friends next time...",
+    "travelerName": "Oliver",
+    "travelerOccupation": "Photographer"
+  }
+}

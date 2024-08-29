@@ -1,0 +1,103 @@
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(185px, auto);
+    grid-auto-flow: dense;
+    row-gap: 30px;
+    column-gap: 30px;
+    position: relative;
+    z-index: 3;
+
+    /* Aturan default untuk ukuran extra-small screens (max-width: 575px) */
+    .item {
+        &.column-12 { grid-column-end: span 12; }
+        &.column-11 { grid-column-end: span 11; }
+        &.column-10 { grid-column-end: span 10; }
+        &.column-9 { grid-column-end: span 9; }
+        &.column-8 { grid-column-end: span 8; }
+        &.column-7 { grid-column-end: span 7; }
+        &.column-6 { grid-column-end: span 6; }
+        &.column-5 { grid-column-end: span 5; }
+        &.column-4 { grid-column-end: span 4; }
+        &.column-3 { grid-column-end: span 3; }
+        &.column-2 { grid-column-end: span 2; }
+        &.column-1 { grid-column-end: span 1; }
+
+        &.row-1 { grid-row-end: span 1; }
+        &.row-2 { grid-row-end: span 2; }
+        &.row-3 { grid-row-end: span 3; }
+        &.row-4 { grid-row-end: span 4; }
+    }
+
+    /* Aturan untuk ukuran small screens (min-width: 576px) */
+    @media (min-width: 576px) {
+        .item {
+            &.column-sm-12 { grid-column-end: span 12; }
+            &.column-sm-11 { grid-column-end: span 11; }
+            &.column-sm-10 { grid-column-end: span 10; }
+            &.column-sm-9 { grid-column-end: span 9; }
+            &.column-sm-8 { grid-column-end: span 8; }
+            &.column-sm-7 { grid-column-end: span 7; }
+            &.column-sm-6 { grid-column-end: span 6; }
+            &.column-sm-5 { grid-column-end: span 5; }
+            &.column-sm-4 { grid-column-end: span 4; }
+            &.column-sm-3 { grid-column-end: span 3; }
+            &.column-sm-2 { grid-column-end: span 2; }
+            &.column-sm-1 { grid-column-end: span 1; }
+        }
+    }
+
+    /* Aturan untuk ukuran medium screens (min-width: 768px) */
+    @media (min-width: 768px) {
+        .item {
+            &.column-md-12 { grid-column-end: span 12; }
+            &.column-md-11 { grid-column-end: span 11; }
+            &.column-md-10 { grid-column-end: span 10; }
+            &.column-md-9 { grid-column-end: span 9; }
+            &.column-md-8 { grid-column-end: span 8; }
+            &.column-md-7 { grid-column-end: span 7; }
+            &.column-md-6 { grid-column-end: span 6; }
+            &.column-md-5 { grid-column-end: span 5; }
+            &.column-md-4 { grid-column-end: span 4; }
+            &.column-md-3 { grid-column-end: span 3; }
+            &.column-md-2 { grid-column-end: span 2; }
+            &.column-md-1 { grid-column-end: span 1; }
+        }
+    }
+
+    /* Aturan untuk ukuran large screens (min-width: 992px) */
+    @media (min-width: 992px) {
+        .item {
+            &.column-lg-12 { grid-column-end: span 12; }
+            &.column-lg-11 { grid-column-end: span 11; }
+            &.column-lg-10 { grid-column-end: span 10; }
+            &.column-lg-9 { grid-column-end: span 9; }
+            &.column-lg-8 { grid-column-end: span 8; }
+            &.column-lg-7 { grid-column-end: span 7; }
+            &.column-lg-6 { grid-column-end: span 6; }
+            &.column-lg-5 { grid-column-end: span 5; }
+            &.column-lg-4 { grid-column-end: span 4; }
+            &.column-lg-3 { grid-column-end: span 3; }
+            &.column-lg-2 { grid-column-end: span 2; }
+            &.column-lg-1 { grid-column-end: span 1; }
+        }
+    }
+
+    /* Aturan untuk ukuran extra-large screens (min-width: 1200px) */
+    @media (min-width: 1200px) {
+        .item {
+            &.column-xl-12 { grid-column-end: span 12; }
+            &.column-xl-11 { grid-column-end: span 11; }
+            &.column-xl-10 { grid-column-end: span 10; }
+            &.column-xl-9 { grid-column-end: span 9; }
+            &.column-xl-8 { grid-column-end: span 8; }
+            &.column-xl-7 { grid-column-end: span 7; }
+            &.column-xl-6 { grid-column-end: span 6; }
+            &.column-xl-5 { grid-column-end: span 5; }
+            &.column-xl-4 { grid-column-end: span 4; }
+            &.column-xl-3 { grid-column-end: span 3; }
+            &.column-xl-2 { grid-column-end: span 2; }
+            &.column-xl-1 { grid-column-end: span 1; }
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "_id": "asd1293uasdads1",
+    "name": "Bobox",
+    "type": "Homestay",
+    "imageUrls": [
+        {
+            "_id": "asd1293uasdads1",
+            "url": "/images/featured-img-1.jpg"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "url": "cozy-havens/images/featured-image-2"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "url": "cozy-havens/images/featured-image-3"
+        }
+    ],
+    "country": "Indonesia",
+    "city": "Bantul, Yogyakarta",
+    "price": "30",
+    "unit": "night",
+    "isPopular": true,
+    "hasBackyard": true,
+    "description": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna. Nunc viverra imperdiet enim. Fusce est.</p><p>Vivamus a tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci. Aenean nec lorem.</p><p>In porttitor. Donec laoreet nonummy augue. Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</p>",
+    "features": [
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "3",
+            "name": "bedrooms",
+            "imageUrl": "cozy-havens/icons/ic_bed"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "1",
+            "name": "living room",
+            "imageUrl": "cozy-havens/icons/ic_lamp"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "3",
+            "name": "bathrooms",
+            "imageUrl": "cozy-havens/icons/ic_bathub"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "1",
+            "name": "dining room",
+            "imageUrl": "cozy-havens/icons/ic_dining-table"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "80",
+            "name": "mbps",
+            "imageUrl": "cozy-havens/icons/ic_wifi"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "8",
+            "name": "unit ready",
+            "imageUrl": "cozy-havens/icons/ic_house"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "2",
+            "name": "refrigator",
+            "imageUrl": "cozy-havens/icons/ic_refrigator"
+        },
+        {
+            "_id": "asd1293uasdads1",
+            "qty": "1",
+            "name": "television",
+            "imageUrl": "cozy-havens/icons/ic_television"
+        }
+    ],
+    "categories": [
+        {
+            "_id": "asd1293uasdads1",
+            "name": "Things to do",
+            "items": [
+                {
+                    "_id": "asd1293uasdads1",
+                    "name": "Parangtritis Beach",
+                    "imageUrl": "cozy-havens/images/treasures-1",
+                    "country": "Indonesia",
+                    "city": "Beach",
+                    "isPopular": true
+                },
+                {
+                    "_id": "asd1293uasdads1",
+                    "name": "Pasar Bantul",
+                    "imageUrl": "cozy-havens/images/treasures-2",
+                    "country": "Indonesia",
+                    "city": "Shopping",
+                    "isPopular": false
+                },
+                {
+                    "_id": "asd1293uasdads1",
+                    "name": "Pinus Forest Dlingo",
+                    "imageUrl": "cozy-havens/images/treasures-3",
+                    "country": "Indonesia",
+                    "city": "Nature",
+                    "isPopular": false
+                },
+                {
+                    "_id": "asd1293uasdads1",
+                    "name": "Karst Sedayu",
+                    "imageUrl": "cozy-havens/images/treasures-4",
+                    "country": "Indonesia",
+                    "city": "Tubing",
+                    "isPopular": false
+                }
+            ]
+        }
+    ],
+    "testimonial": {
+        "_id": "asd1293uasdads1",
+        "imageUrl": "cozy-havens/images/details-testimony",
+        "name": "Happy Traveler",
+        "rate": 4.8,
+        "content": "What a beautiful and challenging adventure, thanks for leading us to an experience that will never be forgotten.",
+        "travelerName": "Donahue",
+        "travelerOccupation": "Stock Trader"
+    }
+}
