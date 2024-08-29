@@ -1,9 +1,11 @@
 import mongoose from "mongoose";
 import Category from "../models/categoryModel.js";
 import MostPicked from "../models/mostPickedModel.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 mongoose
-    .connect('mongodb://localhost:27017/cozyhavens')
+    .connect(process.env.MONGODB_CONNECTOR)
     .then(() => {
         console.log('Connected to MongoDB');
     })

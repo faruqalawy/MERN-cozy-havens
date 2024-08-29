@@ -2,12 +2,11 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import session from "express-session"
+import session from "express-session";
 // import flash from "connect-flash"
 import passport from "passport";
 import LocalStrategy from "passport-local";
 import dotenv from "dotenv";
-
 
 import User from "./models/userModel.js";
 
@@ -20,7 +19,7 @@ const app = express();
 
 // connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/cozyhavens")
+  .connect(process.env.MONGODB_CONNECTOR)
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -31,17 +30,19 @@ mongoose
 // middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  credentials: true,
-  origin: "http://localhost:3000"
-}));
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: {
-      secure: 'auto',
+      secure: "auto",
       httpOnly: true,
       maxAge: Date.now() + 1000 * 60 * 60 * 24 * 7,
     },
@@ -56,17 +57,16 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req, res, next) => {
-    res.locals.currentUser = req.user
-    // res.locals.success_message = req.flash("success_message");
-    // res.locals.error_message = req.flash("error_message");
-    next();
-  });
+  res.locals.currentUser = req.user;
+  // res.locals.success_message = req.flash("success_message");
+  // res.locals.error_message = req.flash("error_message");
+  next();
+});
 
 // routes
 app.use("/mostPicked", MostPickedRoute);
 app.use("/categories", CategoryRoute);
 app.use("/", AuthRoute);
-
 
 app.listen(process.env.APP_PORT, () => {
   console.log("Server running on http://localhost:5000");
