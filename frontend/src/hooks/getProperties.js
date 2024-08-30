@@ -9,7 +9,9 @@ export function useCategoriesProperties(propertyName) {
   useEffect(() => {
     const getCategories = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/categories");
+        const response = await axios.get(
+          "https://mern-cozy-havens-backend.vercel.app/categories"
+        );
         const categories = response.data;
 
         const foundProperty = categories
@@ -36,7 +38,9 @@ export function useMostPickedProperties(propertyName) {
   useEffect(() => {
     const getMostPicked = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/mostPicked");
+        const response = await axios.get(
+          "https://mern-cozy-havens-backend.vercel.app/mostPicked"
+        );
         const mostPicked = response.data;
 
         const property = mostPicked.find((item) => item.name === propertyName);
