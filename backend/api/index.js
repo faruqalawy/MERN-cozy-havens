@@ -63,6 +63,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "https://mern-cozy-havens.vercel.app");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  next();
+});
+
+
 // routes
 app.use("/mostPicked", MostPickedRoute);
 app.use("/categories", CategoryRoute);
