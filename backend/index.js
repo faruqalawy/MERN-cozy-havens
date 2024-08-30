@@ -35,7 +35,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     credentials: true,
-    origin: ["https://mern-cozy-havens.vercel.app", "http://localhost:3000"],
+    origin: c,
   })
 );
 app.use(
@@ -62,13 +62,6 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   // res.locals.success_message = req.flash("success_message");
   // res.locals.error_message = req.flash("error_message");
-  next();
-});
-
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://mern-cozy-havens.vercel.app");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
   next();
 });
 
