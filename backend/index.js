@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
     credentials: true,
-    origin: ["https://mern-cozy-havens.vercel.app", "http://localhost:3000/"],
+    origin: ["https://mern-cozy-havens.vercel.app", "http://localhost:3000"],
   })
 );
 app.use(
