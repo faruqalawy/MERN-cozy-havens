@@ -32,8 +32,8 @@ class LandingPage extends Component {
   async loadData() {
     try {
       const [mostPickedResponse, categoriesResponse] = await Promise.all([
-        axios.get("https://mern-cozy-havens.vercel.app/mostPicked"),
-        axios.get("https://mern-cozy-havens.vercel.app/categories"),
+        axios.get("https://mern-cozy-havens-backend.vercel.app/mostPicked"),
+        axios.get("https://mern-cozy-havens-backend.vercel.app/categories"),
       ]);
 
       console.log("MostPicked Data:", mostPickedResponse.data);
